@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+// import Navbar from "./Navbar";
 
 export default function Home() {
   return (
@@ -8,116 +9,140 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full bg-emerald-500 shadow-lg shadow-emerald-500/50 backdrop-blur border-b border-blue-800 z-50">
-        <div className="navbar container mx-auto flex items-center justify-between py-4 px-6">
+        <div className="navbar container mx-auto flex items-center justify-between py-4 px-4 md:px-6">
+
           <h1 className="font-bold text-lg text-white">Emoto.</h1>
 
-          <div className="nav-links flex gap-6 text-sm">
+          <div className="nav-links hidden md:flex gap-6 text-sm">
             <a href="#projects" className="hover:text-blue-400">Projects</a>
             <a href="#skills" className="hover:text-green-400">Skills</a>
             <a href="#contact" className="hover:text-blue-400">Contact</a>
           </div>
+
         </div>
       </nav>
 
-    <section className="hero">
-
-  <div className="glow glow-green"></div>
-  <div className="glow glow-blue"></div>
-
-  <div className="container hero-grid">
-
-    {/* LEFT */}
-    <div>
-          <h2 className="text-gray-400 mt-4">
-    FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS
-APIs • WORDPRESS • WEB APPLICATIONS
-      </h2>
-      <h1 className="hero-title">
-        <span className="gradient-text">Kevin Emoto</span>
-      </h1>
-
-      <p className="text-gray-400 mt-4">
-       I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
-        Experienced with real-world projects, Docker-based workflows, and modern UI practices. 
-        Currently expanding my skills in React and Python for data-driven applications.
-      </p>
-
-      <div className="mt-6 flex gap-4">
-        <a href="#projects" className="btn btn-primary">
-          View Projects
-        </a>
-
-        <a href="#contact" className="btn btn-outline">
-          Contact Me
+      {/* Hire Button (kept as-is but made responsive) */}
+      <div className="mt-24 px-4 md:px-6">
+        <a href="#contact" className="bg-green-500 px-4 md:px-6 py-2 rounded inline-block text-sm md:text-base">
+          Hire Me
         </a>
       </div>
 
-      <div className="home-scl">
-        <a href="https://www.facebook.com/kejjoh.kelloh">
-          <i className="bi bi-facebook"></i> 
-        </a>
+      <section className="hero px-4 md:px-0">
 
-          <a href="https://www.instagram.com/kelvynemoto/?hl=en">
-          <i className="bi bi-instagram"></i> 
-        </a>
+        <div className="glow glow-green"></div>
+        <div className="glow glow-blue"></div>
 
-          <a href="https://www.youtube.com/@emotokevin3312">
-          <i className="bi bi-youtube"></i> 
-        </a>
+        <div className="container hero-grid grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-          <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905">
-          <i className="bi bi-tiktok"></i> 
-        </a>
+          {/* LEFT */}
+          <div>
 
-       
-        <a href="https://x.com/loger_vic">
-          <i className="bi bi-twitter"></i> 
-        </a>
+            <h2 className="text-gray-400 mt-4 text-sm md:text-base leading-relaxed">
+              FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS
+              APIs • WORDPRESS • WEB APPLICATIONS
+            </h2>
 
-        <a href="https://github.com/emoto-cyber" >
-          <i className="bi bi-github"></i> 
-        </a>
-      </div>
-    </div>
+            <h1 className="hero-title text-3xl md:text-5xl font-bold">
+              <span className="gradient-text">Kevin Emoto</span>
+            </h1>
 
-    {/* RIGHT */}
-    <div className="profile-img">
-      <Image
-        src="/profile.jpeg"
-        alt="Kevin"
-        width={300}
-        height={300}
-        className="profile-img"
-      />
-    </div>
+            <p className="text-gray-400 mt-4 text-sm md:text-base leading-relaxed max-w-xl">
+              I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
+              Experienced with real-world projects, Docker-based workflows, and modern UI practices.
+              Currently expanding my skills in React and Python for data-driven applications.
+            </p>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              <a href="#projects" className="btn btn-primary text-center">
+                View Projects
+              </a>
+
+              <a href="#contact" className="btn btn-outline text-center">
+                Contact Me
+              </a>
+            </div>
+
+            {/* SOCIALS */}
+            <div className="home-scl flex flex-wrap gap-4 mt-6 text-xl">
+
+              <a href="https://www.facebook.com/kejjoh.kelloh">
+                <i className="bi bi-facebook"></i>
+              </a>
+
+              <a href="https://www.instagram.com/kelvynemoto/?hl=en">
+                <i className="bi bi-instagram"></i>
+              </a>
+
+              <a href="https://www.youtube.com/@emotokevin3312">
+                <i className="bi bi-youtube"></i>
+              </a>
+
+              <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905">
+                <i className="bi bi-tiktok"></i>
+              </a>
+
+              <a href="https://x.com/loger_vic">
+                <i className="bi bi-twitter"></i>
+              </a>
+
+              <a href="https://github.com/emoto-cyber">
+                <i className="bi bi-github"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT */}
+          <div className="profile-img flex justify-center md:justify-end mt-10 md:mt-0">
+
+            <Image
+              src="/profile.jpeg"
+              alt="Kevin"
+              width={300}
+              height={300}
+              className="profile-img w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 object-cover rounded-full"
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+  );
+}
+
+     {/* ABOUT */}
+<section className="light-section containers py-16 md:py-20 bg-white text-black text-center px-4 md:px-6">
+
+  <div className="max-w-3xl mx-auto p-6 md:p-10">
+
+    <h2 className="text-2xl md:text-3xl font-bold text-blue-600">
+      About Me
+    </h2>
+
+    <p className="text-gray-700 leading-relaxed text-sm md:text-base mt-4">
+      I’m an organized and motivated IT professional with strong hands-on experience in Laravel-based systems, UI/UX design, and front-end development.
+      I’ve worked on live client websites, internal company systems, and academic projects, often collaborating with senior developers. I use VS Code for local development and enjoy turning ideas into responsive, accessible, and visually clear interfaces.
+      I’m currently learning React and Python to strengthen my front-end and data skills.
+    </p>
 
   </div>
 
 </section>
 
-      {/* ABOUT */}
-      <section className="light-section containers py-20 bg-white text-black text-center px-6">
-        <div className=" max-w-3xl mx-auto p-10">
-          <h2 className="text-3xl font-bold text-blue-600">
-            About Me
-          </h2>
+     {/* PROJECTS */}
+<section id="projects" className="card py-16 md:py-20 px-4 md:px-6 text-center">
 
-          <p className="text-gray-700 leading-relaxed">
-         I’m an organized and motivated IT professional with strong hands-on experience in Laravel-based systems, UI/UX design, and front-end development. 
-         I’ve worked on live client websites, internal company systems, and academic projects, often collaborating with senior developers. I use VS Code for local development and enjoy turning ideas into responsive, accessible, and visually clear interfaces.
-          I’m currently learning React and Python to strengthen my front-end and data skills.
-          </p>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-<section id="projects" className="card py-20 px-6 text-center">
-
-  <h2 className="text-3xl font-bold text-green-500 mb-10">
+  <h2 className="text-2xl md:text-3xl font-bold text-green-500 mb-10">
     Projects
   </h2>
 
-  <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
     {[
       {
@@ -143,28 +168,31 @@ APIs • WORDPRESS • WEB APPLICATIONS
         key={i}
         className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:-translate-y-2 hover:border-blue-500 transition duration-300"
       >
+
         {/* IMAGE */}
-      <Image
-  src={p.image}
-  alt={p.title}
-  width={400}
-  height={200}
-  className="w-full h-48 object-cover"
-/>
+        <Image
+          src={p.image}
+          alt={p.title}
+          width={400}
+          height={200}
+          className="w-full h-40 sm:h-44 md:h-48 object-cover"
+        />
 
         {/* CONTENT */}
-        <div className="p-6 text-left">
-          <h3 className="text-lg font-bold text-blue-400 mb-2">
+        <div className="p-4 md:p-6 text-left">
+
+          <h3 className="text-base md:text-lg font-bold text-blue-400 mb-2">
             {p.title}
           </h3>
 
-          <p className="text-gray-400 text-sm mb-3">
+          <p className="text-gray-400 text-xs sm:text-sm mb-3">
             {p.desc}
           </p>
 
           <p className="text-xs text-green-400">
             {p.tech}
           </p>
+
         </div>
       </div>
     ))}
@@ -172,36 +200,34 @@ APIs • WORDPRESS • WEB APPLICATIONS
   </div>
 </section>
 
-      <section id="skills" className="light-section py-20 bg-white text-black text-center px-6">
+{/* SKILLS */}
+<section id="skills" className="light-section py-16 md:py-20 bg-white text-black text-center px-4 md:px-6">
 
-  <h2 className="text-3xl font-bold text-green-600 mb-10">
+  <h2 className="text-2xl md:text-3xl font-bold text-green-600 mb-10">
     My Skills
   </h2>
 
-  <div className="skills-grid">
-    
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
     {/* BACKEND */}
     <div className="skill-card">
       <h3 className="skill-title backend">Technical Skills</h3>
       <h1>Core/professional</h1>
 
-      <div className="skill-tags">
+      <div className="skill-tags flex flex-wrap gap-2 justify-center">
         {["Laravel", "PHP", "MySQL", "REST APIs", "JavaScript", "Tailwind CSS", "Bootstrap", "HTML & CSS"].map((skill, i) => (
           <span key={i} className="skill-tag">
             {skill}
           </span>
         ))}
       </div>
-      </div>
-
-
+    </div>
 
     {/* FRONTEND */}
     <div className="skill-card">
       <h3 className="skill-title frontend">Soft Skills</h3>
 
-      <div className="skill-tags">
+      <div className="skill-tags flex flex-wrap gap-2 justify-center">
         {["Communication", "Teamwork", "Problem Solving", "Adaptability"].map((skill, i) => (
           <span key={i} className="skill-tag">
             {skill}
@@ -210,13 +236,13 @@ APIs • WORDPRESS • WEB APPLICATIONS
       </div>
     </div>
 
-        {/* FRONTEND */}
+    {/* TOOLS */}
     <div className="skill-card">
       <h3 className="skill-title frontend"></h3>
       <h1>Tools & Platforms</h1>
 
-         <div className="skill-tags">
-        {["HeidiSQL", "Postman", "Docker", "Git", "GitHub", "VS Code","My Sql" ,"Linux (basic)"].map((skill, i) => (
+      <div className="skill-tags flex flex-wrap gap-2 justify-center">
+        {["HeidiSQL", "Postman", "Docker", "Git", "GitHub", "VS Code", "My Sql", "Linux (basic)"].map((skill, i) => (
           <span key={i} className="skill-tag">
             {skill}
           </span>
@@ -224,19 +250,17 @@ APIs • WORDPRESS • WEB APPLICATIONS
       </div>
     </div>
 
-    
-
   </div>
-
 </section>
-{/* EXPERIENCE */}
-<section id="experience" className="py-20 bg-black text-white text-center px-6">
 
-  <h2 className="text-3xl font-bold text-blue-500 mb-10">
+{/* EXPERIENCE */}
+<section id="experience" className="py-16 md:py-20 bg-black text-white text-center px-4 md:px-6">
+
+  <h2 className="text-2xl md:text-3xl font-bold text-blue-500 mb-10">
     Experience
   </h2>
 
-  <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
 
     {[
       {
@@ -284,9 +308,10 @@ APIs • WORDPRESS • WEB APPLICATIONS
     ].map((exp, i) => (
       <div
         key={i}
-        className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:-translate-y-2 hover:border-blue-500 transition duration-300 text-left"
+        className="bg-gray-900 border border-gray-800 rounded-lg p-5 md:p-6 hover:-translate-y-2 hover:border-blue-500 transition duration-300 text-left"
       >
-        <h3 className="text-lg font-bold text-green-400 mb-2">
+
+        <h3 className="text-base md:text-lg font-bold text-green-400 mb-2">
           {exp.role}
         </h3>
 
@@ -303,51 +328,48 @@ APIs • WORDPRESS • WEB APPLICATIONS
             <li key={index}>{item}</li>
           ))}
         </ul>
+
       </div>
     ))}
 
   </div>
 </section>
 
+{/* CONTACT */}
+<section id="contact" className="py-16 md:py-20 text-center px-4 md:px-6">
 
+  <h2 className="text-2xl md:text-3xl font-bold text-blue-500 mb-4">
+    Contact
+  </h2>
 
+  <p className="text-gray-400 mb-4 text-sm md:text-base max-w-xl mx-auto">
+    Let’s build something impactful together - I’m open to internships, part-time roles, and collaborations.
+    If you have a project or an idea, let’s bring it to life..
+  </p>
 
+  <h3 className="text-green-400 mb-6 text-sm md:text-base">
+    0790680307 / 0745382488
+  </h3>
 
-      {/* CONTACT */}
-      <section id="contact" className="py-20 text-center px-6">
+  <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
 
-        <h2 className="text-3xl font-bold text-blue-500 mb-4">
-          Contact
-        </h2>
+    <a href="mailto:emotokevin@gmail.com" className="hover:text-blue-500">
+      Email
+    </a>
 
-        <p className="text-gray-400 mb-4">
-          Let’s build something impactful together - I’m open to internships, part-time roles, and collaborations. 
-          If you have a project or an idea, let’s bring it to life..
-        </p>
+    <a href="https://github.com/emoto-cyber" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+      GitHub
+    </a>
 
-        <h3 className="text-green-400 mb-6">
-          0790680307 / 0745382488
-        </h3>
+    <a href="https://www.linkedin.com/in/kevin-emoto-0b617519b/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+      LinkedIn
+    </a>
 
-        <div className="flex justify-center gap-6 text-sm">
-          <a href="mailto:emotokevin@gmail.com" className="hover:text-blue-500">
-            Email
-          </a>
-          <a href="https://github.com/emoto-cyber" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/kevin-emoto-0b617519b/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-            LinkedIn
-          </a>
-        </div>
+  </div>
 
-      </section>
+</section>
 
-      {/* FOOTER */}
-      <footer className="text-center text-gray-600 text-sm py-6 border-t border-gray-800">
-        © {new Date().getFullYear()} Kevin Emoto. All rights reserved.
-      </footer>
-
-    </main>
-  );
-}
+{/* FOOTER */}
+<footer className="text-center text-gray-600 text-xs md:text-sm py-6 border-t border-gray-800 px-4">
+  © {new Date().getFullYear()} Kevin Emoto. All rights reserved.
+</footer>
