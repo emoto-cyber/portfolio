@@ -124,19 +124,19 @@ APIs • WORDPRESS • WEB APPLICATIONS
         title: "Ongoing Laravel Based Techbridge ERP System",
         desc: "Comprehensive ERP for inventory, sales, and finance management.",
         tech: "Laravel • MySQL • Tailwind CSS • JavaScript",
-        image: "/images/erp.jpg",
+        image: "/images/erp.JPG",
       },
       {
         title: "Healthclassique website",
         desc: "Modern website for healthcare and skincare products.",
         tech: "PHP • WordPress • CSS • JavaScript",
-        image: "/images/health.jpg",
+        image: "/images/health.JPG",
       },
       {
         title: "Hostel Management System",
         desc: "Role-based management system with permissions.",
         tech: "Laravel • Spatie Permissions • MySQL • Tailwind CSS",
-        image: "/images/hostel.jpg",
+        image: "/images/hostel.JPG",
       },
     ].map((p, i) => (
       <div
