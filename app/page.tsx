@@ -45,7 +45,12 @@ export default function Home() {
             <div className="mt-6 flex gap-4">
               <a href="#projects" className="btn btn-primary">View Projects</a>
               <a href="#contact" className="btn btn-outline">Contact Me</a>
-              <a href="#contact" className="btn btn-outline">Hire Me</a>
+              <a
+  href="#contact"
+  className="btn btn-outline"
+>
+  Hire Me
+</a>
             </div>
 
             <div className="home-scl">
@@ -74,7 +79,7 @@ export default function Home() {
       {/* ABOUT */}
       <section className="light-section containers py-20 bg-white text-black text-center px-6">
         <div className="max-w-3xl mx-auto p-10">
-          <h2 className="text-3xl font-bold text-blue-600">About Me</h2>
+          <h2 className="text-3xl font-bold text-blue-600"><center>About Me</center></h2>
 
           <p className="text-gray-700 leading-relaxed">
             I’m an organized and motivated IT professional with strong hands-on experience in Laravel-based systems,
@@ -88,7 +93,7 @@ export default function Home() {
 
       {/* PROJECTS */}
       <section id="projects" className="card py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold text-green-500 mb-10">Projects</h2>
+        <h2 className="text-3xl font-bold text-green-500 mb-10"><center>Projects</center></h2>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
@@ -135,7 +140,7 @@ export default function Home() {
 
       {/* SKILLS */}
       <section id="skills" className="light-section py-20 bg-white text-black text-center px-6">
-        <h2 className="text-3xl font-bold text-green-600 mb-10">My Skills</h2>
+        <h2 className="text-3xl font-bold text-green-600 mb-10"><center>My Skills</center></h2>
 
         <div className="skills-grid">
 
@@ -152,7 +157,7 @@ export default function Home() {
           </div>
 
           <div className="skill-card">
-            <h3 className="skill-title frontend">Soft Skills</h3>
+            <h3 className="skill-title frontend"><center>Soft Skills</center></h3>
 
             <div className="skill-tags">
               {["Communication", "Teamwork", "Problem Solving", "Adaptability"]
