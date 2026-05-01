@@ -19,28 +19,41 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* HERO */}
-<section className="hero pt-12 md:pt-0">
+      {/* MOBILE IMAGE (OUTSIDE HERO) */}
+<div className="flex justify-center pt-20 md:hidden">
+  <div className="profile-img p-2 rounded-full">
+    <Image
+      src="/profile.jpeg"
+      alt="Kevin"
+      width={300}
+      height={300}
+      className="w-40 h-40 object-cover rounded-full"
+    />
+  </div>
+</div>
+
+{/* HERO */}
+<section className="hero w-full relative overflow-hidden">
   <div className="glow glow-green"></div>
   <div className="glow glow-blue"></div>
 
-  <div className="container hero-grid grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full px-6 md:px-20">
 
-    {/* RIGHT (IMAGE WITH FRAME) */}
-    <div className="flex justify-center order-1 md:order-2">
+    {/* DESKTOP IMAGE */}
+    <div className="hidden md:flex justify-end">
       <div className="profile-img p-2 rounded-full">
         <Image
           src="/profile.jpeg"
           alt="Kevin"
           width={300}
           height={300}
-          className="w-40 h-40 md:w-[300px] md:h-[300px] object-cover rounded-full"
+          className="w-[300px] h-[300px] object-cover rounded-full"
         />
       </div>
     </div>
 
-    {/* LEFT (TEXT) */}
-    <div className="order-2 md:order-1 text-center md:text-left">
+    {/* TEXT */}
+    <div className="text-center md:text-left">
       <h2 className="text-gray-400 mt-4 text-sm md:text-base">
         FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WORDPRESS • WEB APPLICATIONS
       </h2>
