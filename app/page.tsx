@@ -19,7 +19,20 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* MOBILE IMAGE (OUTSIDE HERO) */}
+      {/* MOBILE IMAGE (OUTSIDE HERO)
+<div className="flex justify-center pt-20 md:hidden">
+  <div className="profile-img p-2 rounded-full">
+    <Image
+      src="/profile.jpeg"
+      alt="Kevin"
+      width={300}
+      height={300}
+      className="w-40 h-40 object-cover rounded-full"
+    />
+  </div>
+</div> */}
+
+{/* MOBILE IMAGE (OUTSIDE HERO) */}
 <div className="flex justify-center pt-20 md:hidden">
   <div className="profile-img p-2 rounded-full">
     <Image
@@ -37,23 +50,10 @@ export default function Home() {
   <div className="glow glow-green"></div>
   <div className="glow glow-blue"></div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full px-6 md:px-20">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2 items-center w-full px-6 md:px-20">
 
-    {/* DESKTOP IMAGE */}
-    <div className="hidden md:flex justify-end">
-      <div className="profile-img p-2 rounded-full">
-        <Image
-          src="/profile.jpeg"
-          alt="Kevin"
-          width={300}
-          height={300}
-          className="w-[300px] h-[300px] object-cover rounded-full"
-        />
-      </div>
-    </div>
-
-    {/* TEXT */}
-    <div className="text-center md:text-left">
+    {/* TEXT (LEFT ALWAYS ON DESKTOP) */}
+    <div className="text-center md:text-left order-2 md:order-1">
       <h2 className="text-gray-400 mt-4 text-sm md:text-base">
         FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WORDPRESS • WEB APPLICATIONS
       </h2>
@@ -81,6 +81,19 @@ export default function Home() {
         <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905"><i className="bi bi-tiktok"></i></a>
         <a href="https://x.com/loger_vic"><i className="bi bi-twitter"></i></a>
         <a href="https://github.com/emoto-cyber"><i className="bi bi-github"></i></a>
+      </div>
+    </div>
+
+    {/* IMAGE (RIGHT ALWAYS ON DESKTOP) */}
+    <div className="hidden md:flex justify-end order-1 md:order-2">
+      <div className="profile-img p-2 rounded-full">
+        <Image
+          src="/profile.jpeg"
+          alt="Kevin"
+          width={300}
+          height={300}
+          className="w-[300px] h-[300px] object-cover rounded-full"
+        />
       </div>
     </div>
 
