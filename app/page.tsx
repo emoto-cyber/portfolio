@@ -20,62 +20,59 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section className="hero">
-        <div className="glow glow-green"></div>
-        <div className="glow glow-blue"></div>
+<section className="hero pt-12 md:pt-0">
+  <div className="glow glow-green"></div>
+  <div className="glow glow-blue"></div>
 
-        <div className="container hero-grid">
+  <div className="container hero-grid grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-          {/* LEFT */}
-          <div>
-            <h2 className="text-gray-400 mt-4">
-              FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WORDPRESS • WEB APPLICATIONS
-            </h2>
+    {/* RIGHT (IMAGE WITH FRAME) */}
+    <div className="flex justify-center order-1 md:order-2">
+      <div className="profile-img p-2 rounded-full">
+        <Image
+          src="/profile.jpeg"
+          alt="Kevin"
+          width={300}
+          height={300}
+          className="w-40 h-40 md:w-[300px] md:h-[300px] object-cover rounded-full"
+        />
+      </div>
+    </div>
 
-            <h1 className="hero-title">
-              <span className="gradient-text">Kevin Emoto</span>
-            </h1>
+    {/* LEFT (TEXT) */}
+    <div className="order-2 md:order-1 text-center md:text-left">
+      <h2 className="text-gray-400 mt-4 text-sm md:text-base">
+        FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WORDPRESS • WEB APPLICATIONS
+      </h2>
 
-            <p className="text-gray-400 mt-4">
-              I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
-              Experienced with real-world projects, Docker-based workflows, and modern UI practices.
-              Currently expanding my skills in React and Python for data-driven applications.
-            </p>
+      <h1 className="hero-title text-3xl md:text-5xl">
+        <span className="gradient-text">Kevin Emoto</span>
+      </h1>
 
-            <div className="mt-6 flex gap-4">
-              <a href="#projects" className="btn btn-primary">View Projects</a>
-              <a href="#contact" className="btn btn-outline">Contact Me</a>
-              <a
-  href="#contact"
-  className="btn btn-outline"
->
-  Hire Me
-</a>
-            </div>
+      <p className="text-gray-400 mt-4 text-sm md:text-base">
+        I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
+        Experienced with real-world projects, Docker-based workflows, and modern UI practices.
+        Currently expanding my skills in React and Python for data-driven applications.
+      </p>
 
-            <div className="home-scl">
-              <a href="https://www.facebook.com/kejjoh.kelloh"><i className="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/kelvynemoto/?hl=en"><i className="bi bi-instagram"></i></a>
-              <a href="https://www.youtube.com/@emotokevin3312"><i className="bi bi-youtube"></i></a>
-              <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905"><i className="bi bi-tiktok"></i></a>
-              <a href="https://x.com/loger_vic"><i className="bi bi-twitter"></i></a>
-              <a href="https://github.com/emoto-cyber"><i className="bi bi-github"></i></a>
-            </div>
-          </div>
+      <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="#projects" className="btn btn-primary">View Projects</a>
+        <a href="#contact" className="btn btn-outline">Contact Me</a>
+        <a href="#contact" className="btn btn-outline">Hire Me</a>
+      </div>
 
-          {/* RIGHT */}
-          <div className="profile-img">
-            <Image
-              src="/profile.jpeg"
-              alt="Kevin"
-              width={300}
-              height={300}
-              className="profile-img"
-            />
-          </div>
-        </div>
-      </section>
+      <div className="home-scl flex flex-wrap justify-center md:justify-start gap-3 mt-6">
+        <a href="https://www.facebook.com/kejjoh.kelloh"><i className="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/kelvynemoto/?hl=en"><i className="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@emotokevin3312"><i className="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905"><i className="bi bi-tiktok"></i></a>
+        <a href="https://x.com/loger_vic"><i className="bi bi-twitter"></i></a>
+        <a href="https://github.com/emoto-cyber"><i className="bi bi-github"></i></a>
+      </div>
+    </div>
 
+  </div>
+</section>
       {/* ABOUT */}
       <section className="light-section containers py-20 bg-white text-black text-center px-6">
         <div className="max-w-3xl mx-auto p-10">
