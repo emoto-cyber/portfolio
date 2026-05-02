@@ -32,8 +32,8 @@ export default function Home() {
   </div>
 </div> */}
 
-{/* MOBILE IMAGE (OUTSIDE HERO) */}
-<div className="flex justify-center pt-20 md:hidden">
+MOBILE IMAGE
+<div className="flex justify-center pt-28 md:hidden">
   <div className="profile-img p-2 rounded-full">
     <Image
       src="/profile.jpeg"
@@ -47,34 +47,35 @@ export default function Home() {
 
 {/* HERO */}
 <section className="hero w-full relative overflow-hidden">
-  <div className="glow glow-green"></div>
-  <div className="glow glow-blue"></div>
+ 
+  {/* <div className="glow glow-green"></div>
+  <div className="glow glow-blue"></div> */}
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2 items-center w-full px-6 md:px-20">
+  <div className="flex flex-col md:flex-row items-center justify-center w-full px-4 md:px-10 gap-6">
 
-    {/* TEXT (LEFT ALWAYS ON DESKTOP) */}
-    <div className="text-center md:text-left order-2 md:order-1">
-      <h2 className="text-gray-400 mt-4 text-sm md:text-base">
-        FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WORDPRESS • WEB APPLICATIONS
+    {/* TEXT */}
+    {/* <div className="w-full md:w-[55%] text-center md:text-left">
+      <h2 className="text-gray-400 mt-2 text-sm md:text-base">
+        FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WEBSITES • WEB APPLICATIONS
       </h2>
 
       <h1 className="hero-title text-3xl md:text-5xl">
-        <span className="gradient-text">Kevin Emoto</span>
+        <span className="gradient-text">KEVIN EMOTO</span>
       </h1>
 
-      <p className="text-gray-400 mt-4 text-sm md:text-base">
+      <p className="text-gray-400 mt-3 text-sm md:text-base">
         I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
-        Experienced with real-world projects, Docker-based workflows, and modern UI practices.
+        Experienced with real-world projects, Laravel-based workflows, and modern UI practices.
         Currently expanding my skills in React and Python for data-driven applications.
       </p>
 
-      <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
         <a href="#projects" className="btn btn-primary">View Projects</a>
         <a href="#contact" className="btn btn-outline">Contact Me</a>
         <a href="#contact" className="btn btn-outline">Hire Me</a>
       </div>
 
-      <div className="home-scl flex flex-wrap justify-center md:justify-start gap-3 mt-6">
+      <div className="home-scl flex flex-wrap justify-center md:justify-start gap-3 mt-5">
         <a href="https://www.facebook.com/kejjoh.kelloh"><i className="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/kelvynemoto/?hl=en"><i className="bi bi-instagram"></i></a>
         <a href="https://www.youtube.com/@emotokevin3312"><i className="bi bi-youtube"></i></a>
@@ -82,23 +83,85 @@ export default function Home() {
         <a href="https://x.com/loger_vic"><i className="bi bi-twitter"></i></a>
         <a href="https://github.com/emoto-cyber"><i className="bi bi-github"></i></a>
       </div>
-    </div>
+    </div> */}
 
-    {/* IMAGE (RIGHT ALWAYS ON DESKTOP) */}
-    <div className="hidden md:flex justify-end order-1 md:order-2">
-      <div className="profile-img p-2 rounded-full">
-        <Image
-          src="/profile.jpeg"
-          alt="Kevin"
-          width={300}
-          height={300}
-          className="w-[300px] h-[300px] object-cover rounded-full"
-        />
+    {/* MOBILE IMAGE */}
+{/* <div className="flex justify-center pt-28 md:hidden">
+  <div className="profile-img p-2 rounded-full">
+    <Image
+      src="/profile.jpeg"
+      alt="Kevin"
+      width={300}
+      height={300}
+      className="w-40 h-40 object-cover rounded-full"
+    />
+  </div>
+</div> */}
+
+{/* HERO */}
+<section className="hero w-full relative overflow-hidden flex justify-center px-4 md:px-0">
+  
+  <div className="glow glow-green"></div>
+  <div className="glow glow-blue"></div>
+
+  {/* CARD */}
+  <div className="w-full max-w-6xl bg-black/60 backdrop-blur-md rounded-2xl shadow-xl border border-white/10 p-6 md:p-10">
+
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+
+      {/* TEXT */}
+      <div className="w-full md:w-[55%] text-center md:text-left">
+        <h2 className="text-gray-400 mt-2 text-sm md:text-base">
+          FULL-STACK WEB DEVELOPER — BUILDING SCALABLE LARAVEL SYSTEMS APIs • WEBSITES • WEB APPLICATIONS
+        </h2>
+
+        <h1 className="hero-title text-3xl md:text-5xl">
+          <span className="gradient-text">KEVIN EMOTO</span>
+        </h1>
+
+        <p className="text-gray-400 mt-3 text-sm md:text-base">
+          I design and build clean, accessible interfaces and contribute to full-stack systems using Laravel.
+          Experienced with real-world projects, Laravel-based workflows, and modern UI practices.
+          Currently expanding my skills in React and Python for data-driven applications.
+        </p>
+
+        <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          <a href="#projects" className="btn btn-primary">View Projects</a>
+          <a href="#contact" className="btn btn-outline">Contact Me</a>
+          <a href="#contact" className="btn btn-outline">Hire Me</a>
+        </div>
+
+        <div className="home-scl flex flex-wrap justify-center md:justify-start gap-3 mt-5">
+          <a href="https://www.facebook.com/kejjoh.kelloh"><i className="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/kelvynemoto/?hl=en"><i className="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/@emotokevin3312"><i className="bi bi-youtube"></i></a>
+          <a href="https://www.tiktok.com/search?q=emoto&t=1777144062905"><i className="bi bi-tiktok"></i></a>
+          <a href="https://x.com/loger_vic"><i className="bi bi-twitter"></i></a>
+          <a href="https://github.com/emoto-cyber"><i className="bi bi-github"></i></a>
+        </div>
       </div>
+
+      {/* IMAGE (DESKTOP ONLY) */}
+      <div className="hidden md:flex md:w-[45%] justify-center">
+        <div className="profile-img p-2 rounded-full">
+          <Image
+            src="/profile.jpeg"
+            alt="Kevin"
+            width={300}
+            height={300}
+            className="w-[300px] h-[300px] object-cover rounded-full"
+          />
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
 
   </div>
 </section>
+
+
       {/* ABOUT */}
       <section className="light-section containers py-20 bg-white text-black text-center px-6">
         <div className="max-w-3xl mx-auto p-10">
