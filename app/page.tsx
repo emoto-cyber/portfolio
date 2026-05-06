@@ -12,7 +12,9 @@ export default function Home() {
           <h1 className="font-bold text-lg text-white">Emoto.</h1>
 
           <div className="nav-links flex gap-6 text-sm">
+            <a href="#about" className="hover:text-green-400">About Me</a>
             <a href="#projects" className="hover:text-blue-400">Projects</a>
+            <a href="#experience" className="hover:text-blue-400">Experience</a>
             <a href="#skills" className="hover:text-green-400">Skills</a>
             <a href="#contact" className="hover:text-blue-400">Contact</a>
           </div>
@@ -162,7 +164,7 @@ MOBILE IMAGE
 
 
       {/* ABOUT */}
-      <section className="light-section containers py-20 bg-white text-black text-center px-6">
+      <section   id="about"  className="light-section containers py-20 bg-white text-black text-center px-6">
         <div className="max-w-3xl mx-auto p-10">
           <h2 className="text-3xl font-bold text-blue-600"><center>About Me</center></h2>
 
@@ -187,18 +189,24 @@ MOBILE IMAGE
               desc: "Comprehensive ERP for inventory, sales, and finance management.",
               tech: "Laravel • MySQL • Tailwind CSS • JavaScript",
               image: "/images/erp.JPG",
+              demo: "#",
+              github: "https://github.com/emoto-cyber?tab=repositories",
             },
             {
               title: "Healthclassique website",
               desc: "Modern website for healthcare and skincare products.",
               tech: "PHP • WordPress • CSS • JavaScript",
               image: "/images/health.JPG",
+              demo: "https://healthclassique.com/",
+              github:"https://github.com/emoto-cyber?tab=repositories",
             },
             {
               title: "Hostel Management System",
               desc: "Role-based management system with permissions.",
               tech: "Laravel • Spatie Permissions • MySQL • Tailwind CSS",
               image: "/images/hostel.JPG",
+              demo: "#",
+              github: "https://github.com/emoto-cyber/Hostel-Management-system",
             },
           ].map((p, i) => (
             <div
@@ -217,6 +225,46 @@ MOBILE IMAGE
                 <h3 className="text-lg font-bold text-blue-400 mb-2">{p.title}</h3>
                 <p className="text-gray-400 text-sm mb-3">{p.desc}</p>
                 <p className="text-xs text-green-400">{p.tech}</p>
+                <div className="p-6 text-left">
+  {/* <h3 className="text-lg font-bold text-blue-400 mb-2">
+    {p.title}
+  </h3>
+
+  <p className="text-gray-400 text-sm mb-3">
+    {p.desc}
+  </p>
+
+  <p className="text-xs text-green-400 mb-4">
+    {p.tech}
+  </p> */}
+
+  {/* BUTTONS */}
+  <div className="flex gap-2 mt-3">
+    
+    {p.demo && (
+      <a
+        href={p.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-1/2 text-center px-3 py-2 bg-green-500 hover:bg-green-600 text-white text-xs rounded-md transition"
+      >
+        Live Demo
+      </a>
+    )}
+
+    {p.github && (
+      <a
+        href={p.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-1/2 text-center px-3 py-2 border border-gray-600 hover:border-white text-white text-xs rounded-md transition"
+      >
+        GitHub
+      </a>
+    )}
+
+  </div>
+</div>
               </div>
             </div>
           ))}
